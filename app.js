@@ -10,6 +10,9 @@ console.log(process.env);
 const app = express()
 const PORT = process.env.PORT || 4000;
 
+app.get("/", (req, res)=> {
+    res.send("<h1>Hallo Render! server is running </h1>")
+})
 
 app.get("/weather", async (req,res) =>{
     //proxy server
